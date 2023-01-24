@@ -11,17 +11,17 @@ It is good the remember the Docker version current in use
 ```bash
 $docker --version
 ```
-### 2.Pull Image
+### 3.Pull Image
 Pull image(registry) from DockerHub to local manchine.
 ```bash
 $docker pull hello-world
 ```
-### 3.List Image
+### 4.List Image
 Show list of images in local machine
 ```bash
 $docker images
 ```
-### 4.Run Image
+### 5.Run Image
 Use the image for spawning a container and run.
 ```bash
 $docker run hello-world
