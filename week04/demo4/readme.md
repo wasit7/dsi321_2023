@@ -1,4 +1,5 @@
 ## micro webserver
+Please check comment in the Dockefile
 
 ### 1.build an image
 create a new image locally and name it as ```2023_dsi321``` and tag ```1.1``` using the Dockerfile in current directory (. means current directory)
@@ -8,10 +9,13 @@ $docker build -t 2023_dsi321:1.1 .
 ```
 
 ### 2.run container from image
-start a container from the image. ```-it``` is interactive mode. ```--rm``` is remove container when process stop.
+start a container from the image. 
 ```bash
 $docker run -it --rm -p 8000:5000 2023_dsi321:1.1
 ```
+* ```-it``` is interactive mode.
+* ```--rm``` is remove container when process stop.
+* ```-p 8000:5000``` forward host port 8000 to container port 5000
 
 ### 3. check result in browser
 * go to http://localhost:8000/ you should see "Hello World"
