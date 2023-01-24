@@ -19,7 +19,7 @@ $docker run -it --rm -p 8000:5000 2023_dsi321:1.1
 
 ### 3. check result in browser
 * go to http://localhost:8000/ you should see "Hello World"
-* go to http://localhost:8000/date you should see datetime in JSON format
+* go to http://localhost:8000/date you should see datetime in JSON format as following
 ```json
 {
   "day": 24,
