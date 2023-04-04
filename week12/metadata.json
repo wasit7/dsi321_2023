@@ -1,0 +1,26 @@
+{
+
+"metadata":{	"datatype":"ข้อมูลสถิติ",
+		"titl":"thailand_fuel",
+		"data_owner":"กรมธุรกิจพลังงาน กระทรวงพลังงาน",
+		"contact_person":"กลุ่มคลังข้อมูลสถิติ Tel. 02-141-7505",
+		"contact_email":"becobank@nso.go.th",
+		"tag_string":["ปริมาณน้ำมันเชื้อเพลิง", "ภาค", "จังหวัด"],
+		"notes":"ปริมาณน้ำมันเชื้อเพลิงที่ผู้ค้าน้ำมันจำหน่ายให้ลูกค้า จำแนกตามชนิดน้ำมันเชื้อเพลิง ภาค และจังหวัด พ.ศ. 2553 - 2562",
+		"objective":[],
+		"update_frequency_unit":"ปี",
+		"update_frequency_interval":"1",
+		"geo_coverage":"จังหวัด",
+		"data_source":"สำนักงานสถิติแห่งชาติ",
+		"data_format":["CSV","Database"],
+		"data_category":"ข้อมูลสาธารณะ",
+		"right_of_usage":"License not specified"
+		},
+	"reference_url":"http://statbbi.nso.go.th/staticreport/Page/sector/TH/report/sector_13_11_TH_.xlsx",
+	"parents":[],
+	"other":[],
+	"schema":["charfield","charfield","charfield","intfield","floatfield"],
+	"importer_id":,
+	"exploration_spec":{}
+
+}
