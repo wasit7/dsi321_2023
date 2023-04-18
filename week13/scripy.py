@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 import json, os
-
+from datetime import datetime
 
 ## create package
 def sendMetaToCkan(url_ckan, api_key, ckan_meta):
@@ -35,10 +35,12 @@ ckan_meta = json.load(open('metadata.json'))
 url_ckan = os.getenv("CKAN_URL","https://ckan.data.storemesh.com" )  # ใส่ ip ของ ckan server ตรงนี้
 api_key = os.getenv("TOKEN") 
 
+
+now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 ## for upload file
 file_meta = {
     'package_id': ckan_meta['name'],
-    'name': "example-data-scripy",
+    'name': f'data-scripy-{now}',
 }
 # path_input = './result.csv'
 path_input = './df.csv'
