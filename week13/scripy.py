@@ -44,5 +44,5 @@ file_meta = {
 }
 # path_input = './result.csv'
 path_input = './df.csv'
-sendMetaToCkan(url_ckan, api_key, ckan_meta)
+# sendMetaToCkan(url_ckan, api_key, ckan_meta)
 uploadFileToCkan(url_ckan, api_key, file_meta, path_input)
