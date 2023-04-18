@@ -1,0 +1,21 @@
+{
+    "name": "thailand_gdp03",
+    "title": "THAILAND_GDP_03",
+    "notes": "ข้อมูลผลิตภัณฑ์มวลรวม รายจังหวัด ย้อนหลังปีตั้งแต่ ค.ศ.2009 ถึง 2019",
+    "data_type": "ข้อมูลสถิติ",
+    "owner_org": "tu", 
+    "data_source": "-",
+    "maintainer": "-",
+    "update_frequency_unit": "ปี",
+    "data_format": [
+      "CSV"
+    ],
+    "maintainer_email": "tu@sci.com",
+    "objective": [
+      "ยุทธศาสตร์ชาติ",
+      "แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ"
+    ],
+    "data_category": "ข้อมูลสาธารณะ",
+    "geo_coverage": "ประเทศ",
+    "license_id": "License not specified"
+}
