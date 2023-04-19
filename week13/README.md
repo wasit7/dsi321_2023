@@ -39,6 +39,14 @@ https://github.com/wasit7/dsi321_2023/blob/main/week13/metadata.json
 
 # Data Source
 * Weather Data Source : https://docs.google.com/spreadsheets/d/e/2PACX-1vQlEs3FxFPwm-dpvU1YdsfRgsbfT9WdiXJHZm9kJgGTziPnk-y3TWtftbSbxj6Fe_g0NxYgqyVHTVU5/pubhtml?gid=1397577608&amp;single=true&amp;widget=true&amp;headers=false
+* pandas can load HTML table tag with single function
+```python
+# from URL
+dfs = pd.read_html("https://docs.google.com/spreadsheets/d/e/2PACX-1vQlEs3FxFPwm-dpvU1YdsfRgsbfT9WdiXJHZm9kJgGTziPnk-y3TWtftbSbxj6Fe_g0NxYgqyVHTVU5/pubhtml?gid=1397577608&amp;single=true&amp;widget=true&amp;headers=false")
+# from .env : WEB_SCRIPY MUST PRE-DEFINE IN .env
+import os
+dfs = pd.read_html(os.getenv("WEB_SCRIPY"))
+```
 
 
 # Data Preparation and Metadata
