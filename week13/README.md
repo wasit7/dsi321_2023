@@ -45,7 +45,8 @@ https://github.com/wasit7/dsi321_2023/blob/main/week13/metadata.json
 * before write python code in script that send to deploy in real server, you must test and confirm your code in Jupyter.
 * copy .env-template to .env
 ```
-cp .env-template .env
+cp .env-template .env      #ubuntu / mac
+copy .env-template .env    #window
 ```
 * specify TOKEN (permission to access ckan, see in code week 12), CKAN_URL, WEB_SCRIPY URL in .env
 ```
