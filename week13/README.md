@@ -10,15 +10,15 @@ wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yam
 ```
 2. apply cronjob
 ```
-kubectl --kubeconfig=config.yaml apply -f conjob.yaml -n demo
+kubectl --kubeconfig=kubeconfig.yaml apply -f conjob.yaml -n demo
 ```
 3. check job 
 ```
-kubectl --kubeconfig=config.yaml get cronjobs -n demo
+kubectl --kubeconfig=kubeconfig.yaml get cronjobs -n demo
 ```
 4. check pod of job
 ```
-kubectl --kubeconfig=config.yaml get pods -n demo
+kubectl --kubeconfig=kubeconfig.yaml get pods -n demo
 ```
 ***
 
