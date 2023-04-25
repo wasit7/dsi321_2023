@@ -1,5 +1,5 @@
 # Setting Up
-* create requirement.txt, tell dependencies you need (docker file will read this file later)
+* Create requirement.txt, tell dependencies you need (docker file will read this file later)
 ```
 pandas
 requests
@@ -21,25 +21,26 @@ RUN pip install -r /code/requirement.txt
 # เหมือนจะขาดไปหนึ่งบรรทัด
 ```
 
-* create conjob.yaml (see details in the following link)
+* Create conjob.yaml (see details in the following link)
+
 Please change the "name" to your team_id 
 https://github.com/wasit7/dsi321_2023/blob/main/week13/conjob.yaml
 ```yml
 name: scripy-web-wsl01 # change team-id to your team e.g. wsl01
 
 ```
-* modify schedule cronjob to every 6 hours
-* warning : this step requires publish your docker image to docker hub 
+* Modify schedule cronjob to every 6 hours
+* Warning : this step requires publish your docker image to docker hub 
 ```yaml
 schedule: "* * * * *"   # modify to every 6 hours
 image: kran13200/simple-scripy:latest # use your docker hub
 ```
 * create metadata.json  (see detail in link) : you have to modified information corresponding to your information - warning : name should be unique small letter and title should be big letter  
 https://github.com/wasit7/dsi321_2023/blob/main/week13/metadata.json
-* name and title should be name of your dataset and contain your group code
+* Edit dataset name and title to match your dataset and contain your team_id
 ```json
-    "name": "thailand_gdp03",   # must change this line
-    "title": "THAILAND_GDP_03", # must change this line
+    "name": "thailand_gdp03",   # must change this line to weather_wsl01
+    "title": "THAILAND_GDP_03", # must change this line to weather_wsl01
 ```
 
 # Data Source
