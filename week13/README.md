@@ -113,6 +113,11 @@ WEB_SCRIPY=yyyyyyyyy # ใส่ URL web สำหรับ scrap
 * Try to publish your image to docker hub
 * in .yaml file use your image instead
 
+When building Docker image file, you must name image file as
+```
+<userName>/<repoName>:<tagName>
+```
+
 # Kubernates CronJob
 * modified cronjob in metadata.json at schedule
 * deploy to kubernetes server see detail in week 9
