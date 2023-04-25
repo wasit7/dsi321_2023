@@ -7,6 +7,7 @@
  - download
 ```
 wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
+wget https://gitlab.com/-/snippets/2513253/raw/main/kubeconfig.yaml # for the project you need a credential config.yml
 ```
 2. apply cronjob
 ```
