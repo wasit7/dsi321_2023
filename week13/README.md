@@ -21,8 +21,13 @@ RUN pip install -r /code/requirement.txt
 # เหมือนจะขาดไปหนึ่งบรรทัด
 ```
 
-* create conjob.yaml (see detail in link)
+* create conjob.yaml (see details in the following link)
+Please change the "name" to your team_id 
 https://github.com/wasit7/dsi321_2023/blob/main/week13/conjob.yaml
+```yml
+name: scripy-web-wsl01 # change team-id to your team e.g. wsl01
+
+```
 * modify schedule cronjob to every 6 hours
 * warning : this step requires publish your docker image to docker hub 
 ```yaml
