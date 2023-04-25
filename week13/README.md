@@ -4,14 +4,9 @@
  - edit conjob.yaml
 
 1. download cronjob.yml
- 
+   - download
 ```
 wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
-```
- for the project you need a credential
- - download config.yml
-```
-wget https://gitlab.com/-/snippets/2513253/raw/main/kubeconfig.yaml
 ```
 2. apply cronjob
 ```
