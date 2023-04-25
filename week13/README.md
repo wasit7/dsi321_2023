@@ -4,7 +4,7 @@
  - edit conjob.yaml
 
 1. download cronjob.yml
-   - download
+  - download
 ```
 wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
 ```
