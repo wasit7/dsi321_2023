@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: scripy-web
+  name: scripy-web # change name to student code
 spec:
   schedule: "* * * * *"
   jobTemplate:
