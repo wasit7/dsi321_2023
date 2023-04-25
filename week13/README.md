@@ -1,3 +1,27 @@
+# Demo cronjob k8s
+0. make docker image
+ - edit python code and build to registry
+ - edit conjob.yaml
+
+1. download cronjob.yml
+ - download
+```
+wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
+```
+2. apply cronjob
+```
+kubectl --kubeconfig=config.yaml apply -f conjob.yaml -n demo
+```
+3. check job 
+```
+kubectl --kubeconfig=config.yaml get cronjobs -n demo
+```
+4. check pod of job
+```
+kubectl --kubeconfig=config.yaml get pods -n demo
+```
+***
+
 # Setting Up
 * Create requirement.txt, tell dependencies you need (docker file will read this file later)
 ```
@@ -103,26 +127,4 @@ WEB_SCRIPY=yyyyyyyyy # ใส่ URL web สำหรับ scrap
 * [Crontab Editor](https://crontab.guru/#*_*/6_*_*_*)
 * [Weather Data Source](https://docs.google.com/spreadsheets/d/e/2PACX-1vQlEs3FxFPwm-dpvU1YdsfRgsbfT9WdiXJHZm9kJgGTziPnk-y3TWtftbSbxj6Fe_g0NxYgqyVHTVU5/pubhtml?gid=1397577608&amp;single=true&amp;widget=true&amp;headers=false)
 
-## Demo cronjob k8s
-0. make docker image
- - edit python code and build to registry
- - edit conjob.yaml
-
-1. download cronjob.yml
- - download
-```
-wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
-```
-2. apply cronjob
-```
-kubectl --kubeconfig=config.yaml apply -f conjob.yaml -n demo
-```
-3. check job 
-```
-kubectl --kubeconfig=config.yaml get cronjobs -n demo
-```
-4. check pod of job
-```
-kubectl --kubeconfig=config.yaml get pods -n demo
-```
 
