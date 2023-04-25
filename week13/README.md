@@ -5,7 +5,7 @@
 
 1. download cronjob.yml
  - download
-```
+```c
 wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
 wget https://gitlab.com/-/snippets/2513253/raw/main/kubeconfig.yaml # for the project you need a credential config.yml
 ```
