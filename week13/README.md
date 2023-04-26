@@ -124,10 +124,27 @@ RUN pip install -r /code/requirement.txt
 # เหมือนจะขาดไปหนึ่งบรรทัด
 ```
 * run with docker
+```bash
+docker build -t simple-scripy:latest .    # don't forget last dot which means the current directory
+docker run simple-scripy:latest     # run without .env
+docker run --env-file=.env simple-scripy:latest    # run with .env file
+```
 
+At this step you should send your data to CKAN with no cronjob. Without cronjob you still send data to CKAN by manaul. With cronjob, it is more easier and more accurate to process routine tasks by programming. Cronjob is an operation that a part of OS. Linux called "crontab" while Windows called "task schedule".
 
 # Deployment
-## Setting up for Deployment file : Docker, K8S
+
+## Push your image to Docker hub
+* You must have docker hub account / activated with email
+* Try to publish your image to docker hub. When building Docker image file, you must name image file as
+```bash
+docker login
+# docker build -t <userName>/<repoName>:<tagName> .
+docker build -t arc6828/simple-scripy:latest .    # don't forget last dot which means the current directory
+docker push arc6828/simple-scripy    #
+```
+
+## Setting up for K8S Deployment file (.yaml)
 
 * Create conjob.yaml (see details in the following link)
 
@@ -144,19 +161,11 @@ schedule: "* * * * *"   # modify to every 6 hours
 image: kran13200/simple-scripy:latest # use your docker hub
 ```
 
-## Publish to Docker hub
-* You must have docker hub account
-* Try to publish your image to docker hub
-* in .yaml file use your image instead
-
-When building Docker image file, you must name image file as
-```
-<userName>/<repoName>:<tagName>
-```
 
 ## Kubernates CronJob
-* modified cronjob in metadata.json at schedule
-* deploy to kubernetes server see detail in week 9
+* download kubeconfig.yaml file by commmand provide in google classroom
+* modified cronjob in conjob.yaml
+* deploy to kubernetes server see detail in week 9 or see Demo cronjob k8s section above
 
 # Data Visualization and Interpretation
 * use you favorite tool to create a meaningful table or chart. Then use it in report to tell thesory and facts those you have discovered.
