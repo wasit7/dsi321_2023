@@ -133,6 +133,7 @@ docker run --env-file=.env simple-scripy:latest    # run with .env file
 At this step you should send your data to CKAN with no cronjob. Without cronjob you still send data to CKAN by manaul. With cronjob, it is more easier and more accurate to process routine tasks by programming. Cronjob is an operation that a part of OS. Linux called "crontab" while Windows called "task schedule".
 
 # Deployment
+Deployment is just like throwing your coding to process in another machine that operate while your laptap can shutdown. If you processes some instructions with cronjob, it allow you to run some processes more than 1 time on some schedule. 
 
 ## Push your image to Docker hub
 * You must have docker hub account / activated with email
