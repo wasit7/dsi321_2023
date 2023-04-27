@@ -63,14 +63,14 @@ wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/metadata.j
     "title": "THAILAND_GDP_03", # must change this line to weather_wsl01
 ```
 
-* Create .env
+* Create .env (if you need)
 ```bash
 # bash & WSL
 wget https://github.com/wasit7/dsi321_2023/blob/main/week13/.env-template
 cp .env-template .env      #ubuntu / mac
 ```
 
-* Specify TOKEN , CKAN_URL, WEB_SCRIPY URL in .env
+* Specify TOKEN , CKAN_URL, WEB_SCRIPY URL in .env  (if you need)
 
 ```bash
 # .env
