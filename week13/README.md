@@ -129,6 +129,17 @@ docker build -t simple-scripy:latest .    # don't forget last dot which means th
 docker run simple-scripy:latest     # run without .env
 docker run --env-file=.env simple-scripy:latest    # run with .env file
 ```
+### load json file
+- Your json file contains English only
+```python
+import json
+ckan_meta = json.load(open('test.json'))
+```
+- Your json file contains utf8 character like Thai
+```python
+import json
+ckan_meta = json.load(open('metadata.json', encoding="utf-8"))
+```
 
 At this step you should send your data to CKAN with no cronjob. Without cronjob you still send data to CKAN by manaul. With cronjob, it is more easier and more accurate to process routine tasks by programming. Cronjob is an operation that a part of OS. Linux called "crontab" while Windows called "task schedule".
 
