@@ -166,9 +166,12 @@ docker push arc6828/simple-scripy    #
 ## Setting up for K8S Deployment file (.yaml)
 
 * Create conjob.yaml (see details in the following link)
-
-Please change the "name" to your team_id 
 https://github.com/wasit7/dsi321_2023/blob/main/week13/conjob.yaml
+```
+# bash & wsl
+wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/conjob.yaml
+```
+Please change the "name" to your team_id 
 ```yml
 name: scripy-web-wsl01 # change team-id to your team e.g. wsl01
 
@@ -177,7 +180,7 @@ name: scripy-web-wsl01 # change team-id to your team e.g. wsl01
 * Warning : this step requires publish your docker image to docker hub 
 ```yaml
 schedule: "* * * * *"   # modify to every 6 hours
-image: kran13200/simple-scripy:latest # use your docker hub
+image: kran13200/simple-scripy:latest # use your docker hub image
 ```
 
 
