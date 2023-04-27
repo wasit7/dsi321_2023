@@ -114,21 +114,7 @@ wget https://raw.githubusercontent.com/wasit7/dsi321_2023/main/week13/scripy.py
 * modify your ETL in scripy.py
 * modify your ckan config in scripy.py
 * modify your metadata.json
-* Create Dockerfile
-```Dockerfile
-FROM python:3.8
-WORKDIR /code
-COPY . .
-COPY requirement.txt  requirement.txt
-RUN pip install -r /code/requirement.txt
-# เหมือนจะขาดไปหนึ่งบรรทัด
-```
-* run with docker
-```bash
-docker build -t simple-scripy:latest .    # don't forget last dot which means the current directory
-docker run simple-scripy:latest     # run without .env
-docker run --env-file=.env simple-scripy:latest    # run with .env file
-```
+
 ### load json file
 - Your json file contains English only
 ```python
@@ -146,6 +132,30 @@ ckan_meta = json.load(open('metadata.json', encoding="utf-8"))
 # use os to get some values from env, getenv has 1 or 2 parameters : the first is key of value and the second is the default value in case value does not exist.
 url_ckan = os.getenv("CKAN_URL") 
 url_ckan = os.getenv("CKAN_URL","https://ckan.data.storemesh.com" ) 
+```
+
+#### Test Run
+
+##### Run with Terminal
+```python
+python scripy.py
+```
+
+##### Run with Docker
+* Create Dockerfile
+```Dockerfile
+FROM python:3.8
+WORKDIR /code
+COPY . .
+COPY requirement.txt  requirement.txt
+RUN pip install -r /code/requirement.txt
+# เหมือนจะขาดไปหนึ่งบรรทัด
+```
+* run with docker
+```bash
+docker build -t simple-scripy:latest .    # don't forget last dot which means the current directory
+docker run simple-scripy:latest     # run without .env
+docker run --env-file=.env simple-scripy:latest    # run with .env file
 ```
 
 At this step you should send your data to CKAN with no cronjob. Without cronjob you still send data to CKAN by manaul. With cronjob, it is more easier and more accurate to process routine tasks by programming. Cronjob is an operation that a part of OS. Linux called "crontab" while Windows called "task schedule".
