@@ -140,6 +140,13 @@ ckan_meta = json.load(open('test.json'))
 import json
 ckan_meta = json.load(open('metadata.json', encoding="utf-8"))
 ```
+### load value from .env
+- if you change environment or machine, the correct configuration may be changed by admin. 
+```python
+# use os to get some values from env, getenv has 1 or 2 parameters : the first is key of value and the second is the default value in case value does not exist.
+url_ckan = os.getenv("CKAN_URL") 
+url_ckan = os.getenv("CKAN_URL","https://ckan.data.storemesh.com" ) 
+```
 
 At this step you should send your data to CKAN with no cronjob. Without cronjob you still send data to CKAN by manaul. With cronjob, it is more easier and more accurate to process routine tasks by programming. Cronjob is an operation that a part of OS. Linux called "crontab" while Windows called "task schedule".
 
